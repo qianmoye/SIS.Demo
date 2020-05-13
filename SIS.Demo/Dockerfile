@@ -6,7 +6,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["SIS.Demo.csproj", "/"]
+# COPY ["SIS.Demo.csproj", "/"]
 RUN dotnet restore "SIS.Demo.csproj"
 COPY . .
 WORKDIR "/src"
